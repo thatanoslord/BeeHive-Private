@@ -1,7 +1,23 @@
-:root {}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+:root {
+    /* colors */
+    --main-color: #f4B315;
+    --text-color: #fff;
+    --first-color: #1a1a1a;
+    --second-color: #d3af85;
+    --background-color: #111111;
+
+    /* Font measures */
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
 }
