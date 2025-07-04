@@ -60,23 +60,53 @@ header {
     background: transparent;
 }
 
-.logo img {
-    height: 64px;
-    width: 64px;
+.logo {
+    display: flex;
+    align-items: center;
 
 }
 
-.navbar {
+.logo img {
+    height: 64px;
+    width: 64px;
+    vertical-align: middle;
+    margin-right: 8px;
+
+}
+
+.navlist {
     display: flex;
     align-items: center;
     gap: 2rem;
 
 }
 
-.navbar a {
+.navlist a {
     color: var(--text-color);
     font-size: var(--p-font);
     font-weight: 600;
     margin: 0 30px;
-    transition: all .50 ease;
+    transition: all .50s ease;
+}
+
+.navlist a:hover {
+    color: var(--main-color);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: #ff9f0d 0px 1px 25px;
+}
+
+.nav-icons i {
+    vertical-align: middle;
+    font-size: 25px;
+    color: var(--bg-color);
+    margin-right: 8px;
+    margin-left: 5px;
+    transition: all .50s ease;
 }
