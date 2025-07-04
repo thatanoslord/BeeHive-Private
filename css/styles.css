@@ -12,16 +12,30 @@
 :root {
     /* colors */
     --main-color: #f4B315;
-    --text-color: #fff;
-    --first-color: #1a1a1a;
-    --second-color: #d3af85;
-    --background-color: #111111;
+    --text-color: #1A141A;
+    --first-color: #8E5915;
+    --second-color: #E59312;
+    --background-color: #423738;
 
     /* Font measures */
     --big-font: 4.5rem;
     --h2-font: 2.6rem;
     --p-font: 1.1rem;
 }
+
+:root {
+    --main-color: #F4B315;
+    /* Bright golden-yellow: ideal for primary brand elements or highlights */
+    --second-color: #E59312;
+    /* Slightly darker orange tone: good for accents or secondary buttons */
+    --text-color: #1A141A;
+    /* Very dark shade: excellent contrast for readable body text */
+    --other-color: #8E5915;
+    /* Earthy brown: good for icons, borders, or minor elements */
+    --bg-color: #423738;
+    /* Deep muted background: elegant and easy on the eyes */
+}
+
 
 body {
     background-color: var(--background-color);
