@@ -198,3 +198,17 @@ span {
     transform: scale(1.1) translateX(12px);
     border-radius: 3rem;
 }
+
+header.sticky {
+    /* padding: 12px 14%; */
+    background: var(--first-color);
+}
+
+.container {
+
+    padding: 30px 14% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+    text-align: center;
+}
