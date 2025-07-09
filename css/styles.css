@@ -177,3 +177,24 @@ span {
     color: var(--main-color);
     box-shadow: #ff9f0d 0px 1px 25px;
 }
+
+.btn2 {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: var(--p-font);
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--main-color);
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.btn2:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: var(--main-color) 0px 1px 25px;
+    transform: scale(1.1) translateX(12px);
+    border-radius: 3rem;
+}
