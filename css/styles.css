@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
@@ -33,18 +33,17 @@ body {
 
 header {
     position: fixed;
+    width: 100%;
+    height: 80px;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 0 2rem;
-    text-decoration: none;
+    background: transparent;
     padding: 30px 14%;
     transition: all .50 ease;
-    background: transparent;
 }
 
 .logo {
@@ -57,8 +56,7 @@ header {
 
 .navlist {
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    height: 100%;
 
 }
 
@@ -72,7 +70,7 @@ header {
 
 .navlist a:hover {
     color: var(--main-color);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .navlist a.home {
@@ -92,7 +90,7 @@ header {
 
 .nav-icons i {
     vertical-align: middle;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--background-color);
     margin-right: 8px;
     margin-left: 5px;
@@ -118,5 +116,38 @@ header {
     width: 64px;
     vertical-align: middle;
     margin-right: 8px;
+
+}
+
+section {
+    padding: 70px 14% 60px;
+
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    /* align-items: center; */
+    gap: 2rem;
+}
+
+.home-img img {
+    width: 100%;
+    height: auto
+}
+
+.home-text {
+    font-size: 50px;
+}
+
+.home-text h1 {
+    font-size: var(--big-color);
+    font-weight: 700px;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+
 
 }
