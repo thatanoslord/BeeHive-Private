@@ -6,28 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - BeHive</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
         (function () {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+            emailjs.init({
+                publicKey: "m_NpRBYOzXQLivuWj",
+            });
         })();
     </script>
+    <script src="js/script1.js"></script>
 </head>
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo"><img src="icons/logo.png" alt="BeHive Logo" /></a>
+        <a href="index.html" class="logo"><img src="icons/logo.png" alt="BeeHive Logo"></a>
         <ul class="navlist">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#products">Products</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#about">About us</a></li>
             <li><a href="index.html#reviews">Reviews</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html" class="home">Contact us</a></li>
         </ul>
         <div class="nav-icons">
-            <a href="#"><i class="bx bx-search"></i></a>
-            <a href="#"><i class="bx bx-cart"></i></a>
+            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="#"><i class='bx bx-cart'></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
@@ -36,34 +40,29 @@
         <div class="contact-content">
             <div class="contact-text">
                 <h2>Contact Us</h2>
-                <p>Feel free to send us a message. We will reply to your email as soon as possible!</p>
-                <form id="contact-form">
-                    <input type="text" name="from_name" placeholder="Your Name" required />
-                    <input type="email" name="from_email" placeholder="Your Email" required />
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                    <p id="form-status"></p>
-                </form>
+                <p>Send us a message using the form below. We’ll reply as soon as possible!</p>
             </div>
+
+            <form id="contact-form" style="max-width: 600px; margin: auto;">
+                <input id="name" type="text" name="user_name" placeholder="Your Name" required
+                    style="width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: none;">
+                <input id="email" type="email" name="user_email" placeholder="Your Email" required
+                    style="width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: none;">
+                <textarea id="email" name="message" rows="5" placeholder="Your Message" required
+                    style="width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: none;"></textarea>
+                <button onclick="sendMail()" type="submit" class="btn" style="margin-top: 10px;">Send Message</button>
+            </form>
+
+            <p id="form-message" style="text-align: center; margin-top: 20px;"></p>
         </div>
     </section>
 
     <a href="#" class="scroll">
-        <i class="bx bx-up-arrow-alt"></i>
+        <i class='bx bx-up-arrow-alt'></i>
     </a>
 
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-            emailjs.sendForm("service_7rwbbrp", "template_8qe60kj", this)
-                .then(function () {
-                    document.getElementById("form-status").innerHTML = "✅ Message sent successfully!";
-                }, function (error) {
-                    document.getElementById("form-status").innerHTML = "❌ Failed to send message. Please try again.";
-                });
-        });
-    </script>
-    <script src="js/script.js"></script>
+
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
