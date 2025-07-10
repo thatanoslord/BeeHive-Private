@@ -403,7 +403,8 @@ header.sticky {
     border-radius: 3rem;
 }
 
-.bx-text:before {
+.bx-text:before,
+i {
     display: none;
 }
 
@@ -508,6 +509,18 @@ header.sticky {
     font-size: 28px;
     margin-right: 12px;
     color: var(--main-color);
+}
+
+#data {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.span {
+    font-size: var(--p-font);
+    color: var(--second-color);
 }
 
 .scroll {

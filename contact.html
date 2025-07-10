@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - BeHive</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+        })();
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><img src="icons/logo.png" alt="BeHive Logo" /></a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="#"><i class="bx bx-search"></i></a>
+            <a href="#"><i class="bx bx-cart"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-text">
+                <h2>Contact Us</h2>
+                <p>Feel free to send us a message. We will reply to your email as soon as possible!</p>
+                <form id="contact-form">
+                    <input type="text" name="from_name" placeholder="Your Name" required />
+                    <input type="email" name="from_email" placeholder="Your Email" required />
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="scroll">
+        <i class="bx bx-up-arrow-alt"></i>
+    </a>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            emailjs.sendForm("service_7rwbbrp", "template_8qe60kj", this)
+                .then(function () {
+                    document.getElementById("form-status").innerHTML = "✅ Message sent successfully!";
+                }, function (error) {
+                    document.getElementById("form-status").innerHTML = "❌ Failed to send message. Please try again.";
+                });
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
