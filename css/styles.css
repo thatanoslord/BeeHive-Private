@@ -366,3 +366,62 @@ header.sticky {
 .row img:hover {
     transform: scale(1.1);
 }
+
+.review-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.box {
+    padding: 35px;
+    background-color: var(--first-color);
+    border-radius: 3rem;
+}
+
+.box p {
+    color: var(--second-color);
+    font-size: (--p-font);
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+
+}
+
+.in-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.bx-img img {
+    width: 100x;
+    height: auto;
+    border-radius: 3rem;
+}
+
+.bx-text:before {
+    display: none;
+}
+
+.bx-text h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.bx-text h5 {
+    color: var(--second-color);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: var(--main-color);
+    font-size: 18px;
+}
