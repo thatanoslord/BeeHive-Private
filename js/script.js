@@ -38,3 +38,57 @@ sr.reveal('.row-btn,.shop-content', { delay: 300 });
 sr.reveal('.review-content,.contact', { delay: 300 });
 
 
+
+
+
+
+//scrollReveal
+
+const scrollRevealOption = {
+  distance: "50px",
+  origin: "bottom",
+  duration: 1000,
+};
+
+// Header container
+ScrollReveal().reveal(".header_image img", {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".header_content h4, .header_content .section_header", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".header_content p", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
+// About container
+ScrollReveal().reveal(".about_image img", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".about_content .section_header", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".about_content .section_description", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".about_card", {
+  ...scrollRevealOption,
+  delay: 1500,
+  interval: 500,
+});
+
+// Pricing section
+ScrollReveal().reveal(".price_card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
