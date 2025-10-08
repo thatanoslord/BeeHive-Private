@@ -1,3 +1,5 @@
+import ScrollReveal from "scrollreveal";
+
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
