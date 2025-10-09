@@ -629,7 +629,7 @@ i {
     }
 }
 
-/* @media (max-width:860px) {
+ @media (max-width:860px) {
     .home {
         grid-template-columns: 1fr;
         height: 118vh;
@@ -650,8 +650,7 @@ i {
     .about-img {
         text-align: center;
     }
-} */
-
+} 
 @media (max-width:520px) {
     .contact-img {
         gap: 1.5rem;
